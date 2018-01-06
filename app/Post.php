@@ -20,11 +20,11 @@ class Post extends Model
 
     public function photo()
     {
-        return $this->hasOne('App\Photo');
+        return $this->belongsTo('App\Photo');
     }
 
     public function category()
     {
-        return $this->hasOne('App\Category');
+        return $this->belongsTo('App\Category');
     }
 }
