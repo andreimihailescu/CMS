@@ -5,18 +5,28 @@
 
     <div class="col-sm-6">
 
-        {!! Form::open(['method' => 'POST', 'action'=> 'AdminCategoriesController@store']) !!}
+        <div class="row">
 
-        <div class="form-group">
-            {!! Form::label('name', 'Name') !!}
-            {!! Form::text('name', null, ['class' => 'form-control']) !!}
+            {!! Form::open(['method' => 'POST', 'action'=> 'AdminCategoriesController@store']) !!}
+
+            <div class="form-group">
+                {!! Form::label('name', 'Name') !!}
+                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::submit('Create Category', ['class'=>'btn btn-primary']) !!}
+            </div>
+
+            {!! Form::close() !!}
+
         </div>
 
-        <div class="form-group">
-            {!! Form::submit('Create Category', ['class'=>'btn btn-primary']) !!}
-        </div>
+        <div class="row">
 
-        {!! Form::close() !!}
+            @include('includes.form_error')
+
+        </div>
 
     </div>
 
@@ -28,6 +38,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Created</th>
+                <th>Updated</th>
             </tr>
             </thead>
             <tbody>
@@ -38,8 +49,9 @@
 
                     <tr>
                         <td>{{ $category->id }}</td>
-                        <td>{{ $category->name }}</td>
+                        <td><a href="{{ route('admin.categories.edit', $category->id) }}">{{ $category->name }}</a></td>
                         <td>{{ $category->created_at }}</td>
+                        <td>{{ $category->updated_at }}</td>
                     </tr>
 
                 @endforeach
