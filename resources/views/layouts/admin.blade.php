@@ -25,16 +25,12 @@
     <link href="{{asset('css/styles.css')}}" rel="stylesheet">
 
 
-
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
 
 
 </head>
@@ -55,7 +51,6 @@
             <a class="navbar-brand" href="/">Home</a>
         </div>
         <!-- /.navbar-header -->
-
 
 
         <ul class="nav navbar-top-links navbar-right">
@@ -83,10 +78,6 @@
         </ul>
 
 
-
-
-
-
         {{--<ul class="nav navbar-nav navbar-right">--}}
         {{--@if(auth()->guest())--}}
         {{--@if(!Request::is('auth/login'))--}}
@@ -106,9 +97,6 @@
         {{--</li>--}}
         {{--@endif--}}
         {{--</ul>--}}
-
-
-
 
 
         <div class="navbar-default sidebar" role="navigation">
@@ -164,11 +152,11 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Categories<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/categories">All Categories</a>
+                                <a href="{{ route('admin.categories.index') }}">All Categories</a>
                             </li>
 
                             <li>
-                                <a href="/categories/create">Create Category</a>
+                                <a href="{{ route('admin.categories.create') }}">Create Category</a>
                             </li>
 
                         </ul>
@@ -190,11 +178,6 @@
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-
-
-
-
-
 
 
                     <li>
@@ -240,7 +223,8 @@
                         <!-- /.nav-second-level -->
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span
+                                    class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="#">Second Level Item</a>
@@ -291,17 +275,12 @@
     </nav>
 
 
-
-
-
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
                     <a href="/profile"><i class="fa fa-dashboard fa-fw"></i>Profile</a>
                 </li>
-
-
 
 
                 <li>
@@ -320,9 +299,6 @@
                 </li>
 
 
-
-
-
             </ul>
 
         </div>
@@ -330,10 +306,6 @@
     </div>
 
 </div>
-
-
-
-
 
 
 <!-- Page Content -->
@@ -366,9 +338,6 @@
 
 
 @yield('footer')
-
-
-
 
 
 </body>
